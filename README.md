@@ -65,6 +65,17 @@ docker-compose down
 python flush_keys.py
 ```
 
+## Chatbot In Action 
+
+Here is a screenshot of the chatbot in action:
+
+![Chatbot Screenshot](ui-ss.png)
+
+If you are curious about the implementation, the screenshot below shows the output of Monitor, a redis-cli command that allows you to see all the commands being executed in real-time. 
+
+![Monitor Screenshot](monitor-output-ss.png)
+
+
 ## Technologies Used:
 
 - Python
