@@ -32,6 +32,7 @@ services:
     working_dir: /usr/ds5760/
     networks:
       - app-network
+    command: tail -f /dev/null
 
 # Defining network so that the containers can communicate with each other
 networks:
