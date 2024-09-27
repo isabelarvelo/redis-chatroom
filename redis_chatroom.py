@@ -378,7 +378,7 @@ class RedisChatbot:
         """
         fact = self.client.srandmember("facts")
         if fact:
-            print(f"Did you know? {fact}\n")
+            print(f"\nDid you know? {fact}\n")
             return
         else:
             print("No facts available at the moment.")

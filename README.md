@@ -30,7 +30,7 @@ docker-compose up
 3. Open a new terminal (in the same folder) and run the following command to run the chatbot script from within the docker container:
 
 ```bash
-docker-compose exec python bash
+docker-compose exec it python bash
 ```
 
 If this is your first time running the chatbot and you want to have sample data to test the chatbot functionalities, run the following command to populate the database with sample data:
