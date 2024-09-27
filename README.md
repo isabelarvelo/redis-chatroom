@@ -49,7 +49,7 @@ You only need to do this once. If you bring down the docker container and bring 
 python redis_chatroom.py 
 ```
 
-5. Once the chatbot is running, you can follow the instructions on the screen to interact with the chatbot. You can create a profile, join channels, send messages, and use the interactive commands to get information from the database.
+5. Once the chatbot is running, you can follow the instructions on the screen to interact with the chatbot. You can create a profile, join channels, send messages, and use the interactive commands to get information from the database. If you want to add another user to the chatroom, open a new terminal tab, docker exec into the container, and run the chatbot script again. You can then interact with the chatbot as the second user.
 
 6. To exit the chatbot, type `!exit` and press enter. To stop the docker container, open a new terminal and run the following command:
 
