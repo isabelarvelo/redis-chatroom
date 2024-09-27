@@ -33,6 +33,16 @@ docker-compose up
 docker-compose exec -it python bash
 ```
 
+If this is your first time running the chatbot and you want to have sample data to test the chatbot functionalities, run the following command to populate the database with sample data:
+
+```bash
+python populate_weather.py
+python populate_facts.py
+```
+
+You only need to do this once. If you bring down the docker container and bring it back up, the data will still be in the Redis database.
+
+
 4. Once inside the container, run the following command to start the chatbot:
 
 ```bash
@@ -54,13 +64,6 @@ docker-compose down
 ```bash
 python flush_keys.py
 ```
-8. If you delted all of the keys in database and want to have sample data to test the chatbot functionalities, run the following command to repopulate the database with sample data:
-
-```bash
-python populate_weather.py
-python populate_facts.py
-```
-
 
 ## Technologies Used:
 
