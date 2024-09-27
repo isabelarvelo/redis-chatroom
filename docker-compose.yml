@@ -1,0 +1,39 @@
+version: '1.0'
+
+services:
+  redis:
+    image: redis:latest
+    # setting the container name
+    container_name: my-redis
+    # maps port 6379 from the host to port 6379 in the container.
+    ports:
+      - "6379:6379"
+    # starting Redis with append-only file persistence enabled
+    volumes:
+    # mounting the redis-data volume to the /data directory in the container
+    # setting the host path as a relative path so that it can be used on any machine
+    # not using appendonly because can tolerate potential data loss between snapshots
+      - "./:/usr/ds5760"
+      - "./redis-data:/data"
+    networks:
+      - app-network
+
+  python:
+  # Building from a Dockerfile instead of directly using the image to install the necessary dependencies
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    container_name: slim-python
+    # do not want to start python container until redis container is up and running
+    depends_on:
+      - redis
+    volumes:
+      - "./:/usr/ds5760"
+    working_dir: /usr/ds5760/
+    networks:
+      - app-network
+
+# Defining network so that the containers can communicate with each other
+networks:
+  app-network:
+    driver: bridge
