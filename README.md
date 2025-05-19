@@ -1,5 +1,7 @@
 # Redis Chatroom
 
+> Fall 2024
+
 This Redis Chatbot is a console-based chat application for real-time messaging and user management. The chatbot offers public and private messaging, user profiles, channel management, and interactive commands.
 
 ## Key Features:
